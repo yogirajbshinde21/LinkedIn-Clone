@@ -5,3 +5,15 @@ body{
   padding:0;
   box-sizing: border-box;
 }
+
+
+/* LinkedIn Colour Theme */
+.custom-blue {
+  background-color: #0B63BD;
+  color: white;
+  padding: 0.5rem;
+}
+
+.custom-blue:hover {
+  background-color: #084a94; /* Slightly darker shade of #0B63BD */
+}
