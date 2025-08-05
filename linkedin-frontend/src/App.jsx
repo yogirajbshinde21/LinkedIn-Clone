@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar1 from './components/NavbarV1/navbar1'
 import LandingPage from './pages/LandingPage/landingPage'
@@ -10,6 +7,7 @@ import SignUp from './pages/SignUp/signUp'
 import Login from './pages/Login/login'
 import Navbar2 from './components/NavbarV2/navbar2'
 import Feeds from './pages/Feeds/feeds'
+import MyNetwork from './pages/MyNetwork/myNetwork'
 
 function App() {
   const isLogin = true;
@@ -24,6 +22,7 @@ function App() {
         <Route path='/signUp' element={<SignUp/> }/>
         <Route path='/login' element={<Login/>} />
         <Route path='/feeds' element={<Feeds/>}/>
+        <Route path='/myNetwork' element={<MyNetwork/>}/>
       </Routes>
       <Footer/>
       

@@ -35,7 +35,7 @@ const Post = () => {
           {seeMore ? desc : desc.slice(0, 50)}{" "}
           <span
             className={`${
-              seeMore ? "" : "ml-2"
+              seeMore ? "" : "ml-1"
             } cursor-pointer hover:text-blue-800 hover:underline text-gray-600 text-sm`}
             onClick={() => setSeeMore((prev) => !prev)}
           >

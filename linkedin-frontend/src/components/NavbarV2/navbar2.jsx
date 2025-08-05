@@ -6,7 +6,7 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import MessageIcon from '@mui/icons-material/Message';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { BusinessCenter } from "@mui/icons-material";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar2 = () => {
   const [dropdown, setDropDown] = useState(false);
@@ -50,15 +50,15 @@ const Navbar2 = () => {
       </div>
 
       <div className="hidden gap-10 md:flex">
-          <div className="flex flex-col items-center cursor-pointer">
+          <Link to={'/feeds'} className="flex flex-col items-center cursor-pointer">
             <HomeIcon sx={{color: location.pathname === '/feeds' ? "black": "gray"}}/>
             <div className={`text-sm text-gray-500 ${location.pathname==='/feeds' ? 'border-b-3' : ''}`}>Home</div>
-          </div>
+          </Link>
 
-           <div className="flex flex-col items-center cursor-pointer">
-            <GroupsIcon sx={{color: location.pathname === '/mynetwork' ? "black": "gray"}}/>
-            <div className={`text-sm text-gray-500 ${location.pathname==='/mynetwork' ? 'border-b-3' : ''}`}>My Network</div>
-          </div>
+           <Link to={'/myNetwork'} className="flex flex-col items-center cursor-pointer">
+            <GroupsIcon sx={{color: location.pathname === '/myNetwork' ? "black": "gray"}}/>
+            <div className={`text-sm text-gray-500 ${location.pathname==='/myNetwork' ? 'border-b-3' : ''}`}>My Network</div>
+          </Link>
 
            <div className="flex flex-col items-center cursor-pointer">
             <BusinessCenterIcon sx={{color: location.pathname === '/resume' ? "black": "gray"}}/>
