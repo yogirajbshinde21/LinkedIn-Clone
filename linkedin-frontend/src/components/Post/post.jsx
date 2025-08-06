@@ -6,7 +6,7 @@ import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import InsertCommentOutlinedIcon from "@mui/icons-material/InsertCommentOutlined";
 import SendIcon from "@mui/icons-material/Send";
 
-const Post = () => {
+const Post = ({ profile }) => {
   const [seeMore, setSeeMore] = useState(false);
   const [comment, setComment] = useState(false);
 
@@ -61,21 +61,26 @@ const Post = () => {
           </div>
         </div>
 
-        <div className="flex p-1">
-          <div className="w-[33%] justify-center flex gap-2 items-center border-r-1 border-gray-100 p-2 cursor-pointer hover:bg-gray-100">
-            <ThumbUpIcon sx={{ color: "blue", fontSize: 22 }} />{" "}
-            <span>Like</span>
-          </div>
+        {!profile && (
+          <div className="flex p-1">
+            <div className="w-[33%] justify-center flex gap-2 items-center border-r-1 border-gray-100 p-2 cursor-pointer hover:bg-gray-100">
+              <ThumbUpIcon sx={{ color: "blue", fontSize: 22 }} />{" "}
+              <span>Like</span>
+            </div>
 
-          <div onClick={()=> setComment(true)} className="w-[33%] justify-center flex gap-2 items-center border-r-1 border-gray-100 p-2 cursor-pointer hover:bg-gray-100">
-            <InsertCommentOutlinedIcon sx={{ fontSize: 22 }} />{" "}
-            <span>Comment</span>
-          </div>
+            <div
+              onClick={() => setComment(true)}
+              className="w-[33%] justify-center flex gap-2 items-center border-r-1 border-gray-100 p-2 cursor-pointer hover:bg-gray-100"
+            >
+              <InsertCommentOutlinedIcon sx={{ fontSize: 22 }} />{" "}
+              <span>Comment</span>
+            </div>
 
-          <div className="w-[33%] justify-center flex gap-2 items-center border-r-1 border-gray-100 p-2 cursor-pointer hover:bg-gray-100">
-            <SendIcon sx={{ fontSize: 22 }} /> <span>Share</span>
+            <div className="w-[33%] justify-center flex gap-2 items-center border-r-1 border-gray-100 p-2 cursor-pointer hover:bg-gray-100">
+              <SendIcon sx={{ fontSize: 22 }} /> <span>Share</span>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Comment Section */}
         {comment && (

@@ -4,6 +4,8 @@ import Card from "../../components/Card/card";
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import MapsUgcIcon from '@mui/icons-material/MapsUgc';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import Post from "../../components/Post/post";
+import AddIcon from '@mui/icons-material/Add';
 
 const Profile = () => {
   return (
@@ -74,6 +76,71 @@ const Profile = () => {
                     <div className="px-4 py-2 bg-[#0B63BD]/9 text-[#0B63BD] rounded-lg shadow-sm border border-[#0B63BD] hover:bg-[#0B63BD]/18 hover:font-semibold">MongoDB</div>
                 </div>
             </Card>
+            </div>
+
+            {/* Activities Section */}
+            <div className="my-2">
+              <Card padding={1}>
+                  <div className="flex justify-between items-center">
+                        <div className="text-xl">Activities</div>
+                </div>
+                <div className="cursor-pointer px-3 py-1 w-fit border-1 rounded-4xl bg-[#01754f] text-white font-semibold hover:bg-[#014f35]">
+                    Posts
+                </div>
+
+                {/* Parent div for scrollable activities */}
+                <div className="overflow-x-auto my-2 flex gap-3 overflow-y-hidden w-full">
+                  <div className="cursor-pointer shrink-0 w-[350px]">
+                    <Post profile={1}/>
+                  </div>
+
+                  <div className="cursor-pointer shrink-0 w-[350px]">
+                    <Post profile={1}/>
+                  </div>
+
+                  <div className="cursor-pointer shrink-0 w-[350px]">
+                    <Post profile={1}/>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+
+            {/* Experience Section */}
+            <div className="my-2">
+                <Card padding={1}>
+                  <div className="flex justify-between items-center">
+                      <div className="text-xl">Experience</div>
+                      <div className="flex justify-center items-center rounded-full p-3 bg-white hover:bg-gray-100 text-gray-700 hover:text-gray-990 cursor-pointer"><AddIcon/></div>
+                </div>
+
+                <div className="my-2">
+                  <div className="p-2 border-t-1 border-gray-300 flex justify-between">
+                    <div>
+                      <div className="text-lg">DSE Engineer | Full Stack Engineer</div>
+                      <div className="text-sm">Amazon</div>
+                      <div className="text-sm text-gray-500">March 2022, Present</div>
+                      <div className="text-sm text-gray-500">Delhi, India</div>
+                    </div>
+                    <div className=" flex justify-center items-center rounded-full p-3 bg-white hover:bg-gray-100 text-gray-700 hover:text-gray-990 cursor-pointer h-fit"><EditOutlinedIcon/></div>
+                  </div>
+                </div>
+
+
+                <div className="my-2">
+                  <div className="p-2 border-t-1 border-gray-300 flex justify-between">
+                    <div>
+                      <div className="text-lg">DSE Engineer | Full Stack Engineer</div>
+                      <div className="text-sm">Amazon</div>
+                      <div className="text-sm text-gray-500">March 2022, Present</div>
+                      <div className="text-sm text-gray-500">Delhi, India</div>
+                    </div>
+                    <div className=" flex justify-center items-center rounded-full p-3 bg-white hover:bg-gray-100 text-gray-700 hover:text-gray-990 cursor-pointer h-fit"><EditOutlinedIcon/></div>
+                  </div>
+                </div>
+
+                
+                </Card>
             </div>
           </div>
           
