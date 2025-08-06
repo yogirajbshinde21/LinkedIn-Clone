@@ -82,7 +82,7 @@ const Messages = () => {
 
                 {/* This space for typing messgaes */}
                 <div className="p-2 w-full border-b-1 border-gray-200">
-                    <textarea rows={4} className="bg-gray-200 outline-0 rounded-xl text-sm w-full p-3" placeholder="Write a message"></textarea>
+                    <textarea rows={4} className="bg-gray-200 outline-0 rounded-xl text-sm w-full p-3 resize-none" placeholder="Write a message"></textarea>
                 </div>
                 <div className="p-3 flex justify-between">
                     <div>

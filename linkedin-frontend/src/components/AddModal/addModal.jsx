@@ -12,7 +12,7 @@ const AddModal = () => {
     </div>
 
     <div>
-        <textarea cols={50} rows={5} placeholder='What do you want to talk about?' className='my-3 outline-0 text-xl p-2'>
+        <textarea cols={50} rows={5} placeholder='What do you want to talk about?' className='my-3 outline-0 text-xl p-2 resize-none'>
 
         </textarea>
     </div>
