@@ -17,13 +17,13 @@ const Navbar2 = () => {
   return (
     <div className="bg-white h-13 flex justify-between py-1 px-5 xl:px-50 fixed top-0 w-[100%] z-1000">
       <div className="flex gap-2 items-center">
-        <div>
+        <Link to={'/feeds'}>
           <img
             className="w-8 h-8"
             src={"/src/assets/linkedin.png"}
             alt="logo"
           />
-        </div>
+        </Link>
 
         <div className="relative">
           <input
@@ -57,18 +57,18 @@ const Navbar2 = () => {
 
            <Link to={'/myNetwork'} className="flex flex-col items-center cursor-pointer">
             <GroupsIcon sx={{color: location.pathname === '/myNetwork' ? "black": "gray"}}/>
-            <div className={`text-sm text-gray-500 ${location.pathname==='/myNetwork' ? 'border-b-3' : ''}`}>My Network</div>
+            <div className={`text-sm text-gray-500 text-center ${location.pathname==='/myNetwork' ? 'border-b-3' : ''}`}>My Network</div>
           </Link>
 
-           <div className="flex flex-col items-center cursor-pointer">
+           <Link to={'/resume'} className="flex flex-col items-center cursor-pointer">
             <BusinessCenterIcon sx={{color: location.pathname === '/resume' ? "black": "gray"}}/>
             <div className={`text-sm text-gray-500 ${location.pathname==='/resume' ? 'border-b-3' : ''}`}>Resume</div>
-          </div>
+          </Link>
 
-           <div className="flex flex-col items-center cursor-pointer">
+           <Link to={'/messages'} className="flex flex-col items-center cursor-pointer">
             <MessageIcon sx={{color: location.pathname === '/messages' ? "black": "gray"}}/>
-            <div className="{`text-sm text-gray-500 ${location.pathname==='/messages' ? 'border-b-3' : ''}`}">Message</div>
-          </div>
+            <div className={`text-sm text-gray-500 ${location.pathname==='/messages' ? 'border-b-3' : ''}`}>Message</div>
+          </Link>
 
            <div className="flex flex-col items-center cursor-pointer">
             <div><NotificationsIcon sx={{color: location.pathname === '/notifications' ? "black": "gray"}}/><span className="p-1 rounded-full text-sm bg-red-700 text-white">1</span></div>
