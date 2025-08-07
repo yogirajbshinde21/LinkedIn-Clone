@@ -1,6 +1,5 @@
 import React from "react";
 import ProfileCard from "../../components/profileCard/profileCard";
-import Card from "../../components/Card/card";
 import Advertisement from "../../components/Advertisement/advertisement";
 import Post from "../../components/Post/post";
 
@@ -16,11 +15,10 @@ const SingleActivity = () => {
 
       {/* middle side */}
       <div className="w-[100%] py-5 sm:w-[50%]">
-            <div>
-              <Post />
-            </div>
+        <div>
+          <Post />
         </div>
-
+      </div>
 
       {/* right side */}
       <div className="w-[26%] py-5 hidden md:block">
