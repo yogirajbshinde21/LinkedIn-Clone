@@ -13,8 +13,13 @@ import AboutModal from "../../components/AboutModal/aboutModal";
 import ExpModal from "../../components/ExpModal/expModal";
 import MessageModal from "../../components/MessageModal/messageModal";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Profile = () => {
+
+  const {id} = useParams();
+
   const [imageSetModal, setImageModal] = useState(false);
   const [circularImage, setCircularImage] = useState(true);
   const [infoModal, setInfoModal] = useState(false);
@@ -183,23 +188,25 @@ const Profile = () => {
 
               {/* Parent div for scrollable activities */}
               <div className="overflow-x-auto my-2 flex gap-3 overflow-y-hidden w-full">
-                <div className="cursor-pointer shrink-0 w-[350px]">
-                  <Post profile={1} />
-                </div>
+                <Link to={`/profile/${id}/activities/111`} className="cursor-pointer shrink-0 w-[350px] h-[560px]">
+                  <Post profile={1}/>
+                </Link>
 
-                <div className="cursor-pointer shrink-0 w-[350px]">
-                  <Post profile={1} />
-                </div>
+                <Link to={`/profile/${id}/activities/112`} className="cursor-pointer shrink-0 w-[350px] h-[560px]">
+                  <Post profile={1}/>
+                </Link>
 
-                <div className="cursor-pointer shrink-0 w-[350px]">
-                  <Post profile={1} />
-                </div>
+                <Link to={`/profile/${id}/activities/113`} className="cursor-pointer shrink-0 w-[350px] h-[560px]">
+                  <Post profile={1}/>
+                </Link>
+
+                
               </div>
 
               <div className="w-full flex justify-center items-center">
-                <div className="p-2 rounded-2xl cursor-pointer hover:bg-gray-300 w-fit">
+                <Link to={`/profile/${id}/activities`} className="p-2 rounded-2xl cursor-pointer hover:bg-gray-300 w-fit">
                   Show All Posts <ArrowRightAltIcon/>
-                </div>
+                </Link>
               </div>
             </Card>
           </div>
