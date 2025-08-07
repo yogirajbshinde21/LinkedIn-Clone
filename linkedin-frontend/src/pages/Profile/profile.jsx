@@ -12,6 +12,7 @@ import EditInfoModal from "../../components/EditInfoModal/editInfoModal";
 import AboutModal from "../../components/AboutModal/aboutModal";
 import ExpModal from "../../components/ExpModal/expModal";
 import MessageModal from "../../components/MessageModal/messageModal";
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const Profile = () => {
   const [imageSetModal, setImageModal] = useState(false);
@@ -192,6 +193,12 @@ const Profile = () => {
 
                 <div className="cursor-pointer shrink-0 w-[350px]">
                   <Post profile={1} />
+                </div>
+              </div>
+
+              <div className="w-full flex justify-center items-center">
+                <div className="p-2 rounded-2xl cursor-pointer hover:bg-gray-300 w-fit">
+                  Show All Posts <ArrowRightAltIcon/>
                 </div>
               </div>
             </Card>
