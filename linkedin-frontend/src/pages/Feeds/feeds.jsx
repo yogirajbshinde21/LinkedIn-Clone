@@ -115,6 +115,8 @@ const Feeds = () => {
           <AddModal />
         </Modal>
       )}
+
+      
     </div>
   );
 };
